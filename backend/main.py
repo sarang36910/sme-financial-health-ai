@@ -18,6 +18,16 @@
 # os.environ.pop("https_proxy", None)
 # os.environ.pop("HTTP_PROXY", None)
 # os.environ.pop("HTTPS_PROXY", None)
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def root():
+    return {
+        "status": "ok",
+        "message": "SME Financial Health AI backend is running 🚀"
+    }
 
 
 
