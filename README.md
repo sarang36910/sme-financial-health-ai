@@ -151,6 +151,6 @@ Visual dashboards with charts
 
 👨‍💻 Author
 
-Sarang P
+Sarang
 Data Analyst | Aspiring Data Scientist
 GitHub: https://github.com/sarang36910
