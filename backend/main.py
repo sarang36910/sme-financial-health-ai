@@ -1,6 +1,7 @@
 
 
 
+
 # from fastapi import FastAPI, UploadFile, File, Query
 # import pandas as pd
 # from io import BytesIO
@@ -555,6 +556,16 @@ from io import BytesIO
 import pandas as pd
 
 app = FastAPI()
+
+from fastapi import FastAPI
+
+@app.get("/")
+def root():
+    return {
+        "status": "ok",
+        "message": "SME Financial Health AI API is running",
+        "docs": "/docs"
+    }
 
 app.add_middleware(
     CORSMiddleware,
