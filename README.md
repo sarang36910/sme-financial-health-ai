@@ -1,82 +1,95 @@
-🧾 SME Financial Health Assessment Platform (AI-Powered)
+🏦 SME Financial Health AI Platform
 📌 Overview
 
-This project is an AI-powered financial health assessment platform designed for Small and Medium Enterprises (SMEs).
-It analyzes uploaded financial data to generate actionable insights, risk assessment, and investor-ready reports through a full-stack application.
+The SME Financial Health AI Platform is an AI-powered web application designed to help Small and Medium Enterprises (SMEs) assess their financial health using uploaded financial data.
+The platform analyzes revenue, expenses, and cash flow patterns to generate actionable insights, risk evaluation, industry benchmarking, and investor-ready summaries.
 
-The system focuses on clarity, automation, and accessibility for non-finance business owners.
+This solution is built to support non-finance business owners by presenting complex financial analysis in a simple, understandable format.
+
+🎯 Problem Statement Addressed
+
+SMEs often lack access to advanced financial analysis tools due to cost and complexity.
+This platform solves that by providing:
+
+Automated financial health assessment
+
+Risk identification and scoring
+
+Industry-specific benchmarking
+
+Investor-ready financial summaries
+
+Scalable backend with secure data storage
 
 🚀 Key Features
-🔹 Financial Analysis
+✅ Financial Analysis
 
-Revenue, expense, and profit calculation
+Total revenue, expenses, and profit calculation
 
-Profit margin and expense efficiency
+Financial health score (0–100)
 
-Financial health scoring (0–100)
+Risk categorization (Low / Moderate / High)
 
-Risk classification (Low / Moderate / High)
+✅ Industry Benchmarking
 
-🔹 AI-Ready Insights
+Supports multiple industries (Retail, Manufacturing, Services, etc.)
 
-Business performance summary
+Compares business performance against industry averages
 
-Cost optimization suggestions
+✅ Actionable Insights
 
-Investor-focused insights
+Identifies cost optimization needs
 
-Designed for LLM-based recommendations
+Generates investor-friendly insights
 
-🔹 Forecasting & Risk Signals
+✅ File Upload Support
 
-Monthly expense aggregation
+CSV / XLSX financial files
 
-Burn-rate based risk indicators
+Automated parsing using pandas
 
-Scalable for advanced forecasting models
+✅ Database Integration
 
-🔹 Industry Awareness
+Stores financial reports securely in PostgreSQL
 
-Industry input (Retail, Manufacturing, Services, etc.)
+Enables report history tracking
 
-Industry-specific context in reports
+✅ AI-Ready Architecture
 
-🔹 Multilingual Ready
+Designed to support LLM-based insights (OpenAI / Claude)
 
-Backend supports multilingual insight generation
+Environment-based API key support
 
-Easily extendable to Hindi / regional languages
+✅ Live Deployment
 
-🔹 Full-Stack Architecture
+Fully deployed backend (publicly accessible)
 
-Backend: FastAPI + Python (pandas)
+🛠️ Tech Stack
+Layer	Technology
+Backend	FastAPI (Python)
+Data Processing	pandas
+Database	PostgreSQL
+Deployment	Render
+Frontend	React (basic dashboard)
+Security	Environment variables, HTTPS
+📂 Project Structure
+sme-financial-health-ai/
+├── backend/
+│   ├── main.py
+│   ├── requirements.txt
+│   ├── runtime.txt
+│   └── database/
+├── frontend/
+│   └── react-dashboard/
+├── README.md
 
-Frontend: React.js
+🌐 Live Deployment
 
-APIs: REST-based integration
+🔗 Backend API (Live):
+https://sme-financial-health-ai.onrender.com
 
-File Upload: CSV / XLSX
-
-🧠 System Architecture
-React Frontend (Port 5173)
-        ↓
-FastAPI Backend (Port 8000)
-        ↓
-Pandas Data Processing
-        ↓
-JSON Financial Report
-
-📂 Supported Input Formats
-
-CSV (.csv)
-
-Excel (.xlsx)
-
-Required Columns:
-
-Revenue
-
-Expense
+🔗 API Documentation (Swagger):
+https://sme-financial-health-ai.onrender.com/docs
 
 📊 Sample Output
 {
@@ -86,101 +99,58 @@ Expense
     "profit": 12900,
     "financial_health_score": 74
   },
-  "industry_comparison": {
-    "industry": "Retail"
-  },
   "risk_overview": {
     "risk_level": "Moderate Risk"
+  },
+  "industry_comparison": {
+    "industry": "Retail"
   },
   "investor_note": "Business is stable but requires cost optimization before scaling."
 }
 
-🛠️ Tech Stack
-Layer	Technology
-Frontend	React.js (Vite)
-Backend	FastAPI
-Data Processing	Python (pandas)
-API	REST
-File Handling	CSV / XLSX
-Security	CORS enabled, no raw data persistence
-▶️ How to Run the Project
-🔹 Backend Setup
-cd backend
-venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn main:app --reload
+▶️ Demo Video
 
+🎥 Demo Video (Public):
+(Add your YouTube or Google Drive link here)
 
-Backend runs at:
+⚙️ How It Works (High Level)
 
-http://127.0.0.1:8000
+User uploads a financial file (CSV/XLSX)
 
+Backend parses and validates data
 
-Swagger Docs:
+Financial metrics are calculated
 
-http://127.0.0.1:8000/docs
+Health score and risk level are generated
 
-🔹 Frontend Setup
-cd frontend
-npm install
-npm run dev
+Industry benchmarking is applied
 
+Results are stored in the database
 
-Frontend runs at:
+Investor-ready insights are returned
 
-http://localhost:5173
+🔐 Security & Compliance
 
-🧪 How to Use
+All secrets handled using environment variables
 
-Open the frontend URL
+HTTPS enforced via Render
 
-Upload a CSV or Excel file
-
-Select the business industry
-
-Click Analyze
-
-View financial insights instantly
-
-🔐 Security & Data Handling
-
-No raw financial files are stored
-
-Only derived insights are returned
-
-Designed for secure API integration
-
-Ready for encryption & compliance extensions
+No sensitive credentials committed to source code
 
 📈 Future Enhancements
 
 GST return integration
 
-Banking & NBFC API connections
+Banking API integration (loan & cash flow analysis)
 
-Automated bookkeeping rules
+Advanced AI recommendations
 
-Creditworthiness scoring
+Multilingual support (Hindi & regional languages)
 
-Advanced AI forecasting
+Visual dashboards with charts
 
-Interactive data visualizations
-
-🏆 Conclusion
-
-This platform delivers a working MVP that demonstrates:
-
-Real financial intelligence
-
-Practical SME use-cases
-
-Clean full-stack integration
-
-Scalable AI-ready architecture
-
-It is designed to be production-extendable, investor-friendly, and evaluation-ready.
-
-👤 Author
+👨‍💻 Author
 
 Sarang P
-MCA Graduate | Data Analyst | Aspiring Data Scientist
+Data Analyst | Aspiring Data Scientist
+GitHub: https://github.com/sarang36910
